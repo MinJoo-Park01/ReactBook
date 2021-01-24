@@ -1,6 +1,6 @@
 .CommentInsert{
     display: flex;
-    background: #495057;
+    background: #c3d1df;
 }
 
 .CommentInsert input{
@@ -12,7 +12,7 @@
     font-size: 1.125rem;
     line-height: 1.5;
     width: 512px;
-    color: white;
+    color: rgb(73, 73, 73);
 }
 
 .CommentInsert .inputNames{

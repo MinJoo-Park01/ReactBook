@@ -1,5 +1,4 @@
 import React, { useState, useRef, useCallback } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Template from './Template';
 import CommentInput from './commentInput';
@@ -30,15 +29,17 @@ function App() {
 
 
   return (
-    <div style={{ padding: 20, backgroundColor: '#282c34' }}>
+    <div>
       <Template>
         <Article />
         <CommentInput onInsert={onInsert} />
       </Template>
-      <div>
+      <div style={{ marginBottom: "4rem" }}>
         {comments.map((comment, index) => {
           return (
             <Comment
+              key={comment.id}
+              id={comment.id}
               name={comment.name}
               content={comment.content}
             />

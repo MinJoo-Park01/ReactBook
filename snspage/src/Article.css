@@ -2,21 +2,30 @@
     width: 650px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 6rem;
     border-radius: 4px;
     overflow: hidden;
+    height: 650px;
 }
 
 .Template .title{
-    background: #22b8cf;
-    color: black;
-    height: 4rem;
+    margin-top: 10px;
     font-size: 1.5rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.Template .center{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
 .Template .content{
+    margin-top:5px;
+    margin-bottom: 5px;
     background: white;
 }
