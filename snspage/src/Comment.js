@@ -3,9 +3,9 @@ import logo from './logo.svg';
 
 const styles = {
     root: {
-        width: '20%',
+        width: '40%',
         margin: 'auto',
-        padding: 16,
+        padding: 10,
         textAlign: 'left',
         backgroundColor: 'white',
         borderRadius: 16
