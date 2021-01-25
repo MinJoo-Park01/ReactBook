@@ -8,9 +8,26 @@ const CommentInput = ({ onInsert }) => {
         content: ''
     });
 
-    const onChange = useCallback(e => {
-        setValue(e.target.value);
-    }, []);
+    const onChangeName = useCallback(
+        (e) => {
+            setValue({
+                name: e.target.value,
+                content: value.content,
+            });
+        },
+        [value]
+    );
+
+    const onChangeContent = useCallback(
+        (e) => {
+            setValue({
+                name: value.name,
+                content: e.target.value,
+            });
+        },
+        [value]
+    );
+
 
     const onSubmit = useCallback(
         e => {
@@ -30,11 +47,11 @@ const CommentInput = ({ onInsert }) => {
             <input classNames="inputNames"
                 placeholder="이름"
                 value={value.name}
-                onChange={onChange}
+                onChange={onChangeName}
             />
-            <input placeholder="내용"
+            <input placeholder="댓글"
                 value={value.content}
-                onChange={onChange}
+                onChange={onChangeContent}
             />
             <button type="submit">
                 <MdAdd />
