@@ -15,12 +15,14 @@ function App() {
   const nextId = useRef(1);
 
   const onInsert = useCallback(
-    name => {
+    (name, content) => {
       const comment = {
         id: nextId.current,
         name,
-        content: comments['content']
+        content
       };
+      console.log(name);
+      console.log(content);
       setComments(comments => comments.concat(comment));
       nextId.current += 1; //nextId 1씩 더하기
     },
@@ -35,7 +37,7 @@ function App() {
         <CommentInput onInsert={onInsert} />
       </Template>
       <div style={{ marginBottom: "4rem" }}>
-        {comments.map((comment, index) => {
+        {comments.map((comment) => {
           return (
             <Comment
               key={comment.id}

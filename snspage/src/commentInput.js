@@ -3,40 +3,38 @@ import { MdAdd } from 'react-icons/md';
 import './CommentInput.css';
 
 const CommentInput = ({ onInsert }) => {
-    const [name, setName] = useState('');
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState({
+        name: '',
+        content: ''
+    });
 
-    const onChangeName = useCallback(e => {
-        setName(e.target.value);
-    }, []);
-
-    const onChangeValue = useCallback(e => {
+    const onChange = useCallback(e => {
         setValue(e.target.value);
     }, []);
 
     const onSubmit = useCallback(
         e => {
-            onInsert(name);
-            setName('');
-
-            onInsert(value);
-            setValue('');
+            onInsert(value.name, value.content);
+            setValue({
+                name: '',
+                content: ''
+            });
 
             e.preventDefault();
         },
-        [onInsert, name, value],
+        [onInsert, value],
     );
 
     return (
         <form className="CommentInsert" onSubmit={onSubmit}>
             <input classNames="inputNames"
                 placeholder="이름"
-                name={name}
-                onChange={onChangeName}
+                value={value.name}
+                onChange={onChange}
             />
             <input placeholder="내용"
-                value={value}
-                onChange={onChangeValue}
+                value={value.content}
+                onChange={onChange}
             />
             <button type="submit">
                 <MdAdd />
