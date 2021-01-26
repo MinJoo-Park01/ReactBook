@@ -1,0 +1,24 @@
+.CommentInsert{
+    display: flex;
+    background: #c3d1df;
+}
+
+.CommentInsert input{
+    /*기본 스타일 초기화*/
+    background:none;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    width: 512px;
+    color: rgb(73, 73, 73);
+}
+
+.CommentInsert .inputNames{
+    width:150px;
+}
+
+:-ms-input-placeholder{
+    color: #dee2e6;
+}
