@@ -12,6 +12,9 @@ function App() {
     { id: 1, name: 'Minjoo Park', content: 'I like it!', }
   ]);
 
+  const [like, setLike] = useState(0);  //좋아요 버튼구현
+
+
   const nextId = useRef(1);
 
   const onInsert = useCallback(
@@ -34,6 +37,7 @@ function App() {
     <div>
       <Template>
         <Article />
+        <h3>LIKE<span onClick={() => { setLike(like + 1) }}>👍🏻</span>{like}</h3>
         <CommentInput onInsert={onInsert} />
       </Template>
       <div style={{ marginBottom: "4rem" }}>
