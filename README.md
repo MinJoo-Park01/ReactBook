@@ -10,4 +10,5 @@
   
 # [Preview]  
   
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/62490238/105857249-77860a00-602d-11eb-8787-b9c9cfc7bb46.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/62490238/106089081-90480a00-616a-11eb-9f37-4660425c6abd.gif)
+
